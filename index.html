@@ -1,426 +1,257 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Page d'acceuil</title>
+  </head>
+  <body>
+    <!-- <header>
+      <a href="#" class="logo"
+        ><img src="imgs/logo.png" alt="" /><span>UCCScholarships</span></a
+      >
+      <input type="checkbox" id="nav-toggler" class="nav-toggler" />
+      <label for="nav-toggler" class="nav-toggler-label">
+        <i class="fas fa-bars fa-2x burger"></i>
+      </label>
+      <nav>
+        <div id="underline"></div>
 
-        <style>
-            body{
-                margin: 0px;
-                padding: 0px;
-                background-image: url("photo2.jpg");
-            }
-            h4{
-            text-align: center;
-            font-size: 29px;
-            background-color: midnightblue;
-        }
-        h1{
-            text-align:left;
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: lightslategray;
-        }
-            ul{
-                display: flex;
-                list-style-type: none;
-            }
-            a {
-                text-decoration: none;
-            }
-            .a{
-                padding-right: 10px;
-            }
-            .navbar{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                height: 15vh;
-                max-width: 100rem;
-                width: 100%;
-                margin: 0 auto;
-                background-color: lightgrey;
-            }
-            .logo{
-                color: brown;
-                font-size: 3rem;
-                font-weight: 700;
-                padding: 1.5rem 0;
-                width: 20%;
-                font-family: berlin;
-            }
-            .menu{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 35rem;
-                padding: 1.5rem 15;
-                background-color: midnightblue;
-            }
-            .menu a {
-                color: #ffffff;
-                font-weight: bold;
-                text-transform: uppercase;
-                transition: 0.4s ease-in-out;
-                padding-right: 10px;
-            }
-            .menu a::after{
-                background: black;
-                display: block;
-                position: relative;
-                top: 1px;
-                width: 0;
-                height: 2px;
-                transition: 0.5s ease-in-out;
-            }
-            .menu a.active::after,
-            .menu a:hover{
-                width: 100%;
-            }
-            .menu a.active,
-            .menu a:hover{
-                color: black;
-            }
-            .content {
-  display: flex;
-  justify-content: space-between;
-  max-width: 80rem;
-  height: 85vh;
-  width: 100%;
-  margin: 0 auto 0 auto;
-  color: #222;
-  gap: 3rem;
-}
-
-/* Left Content */
-
-.left {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 70%;
-  height: auto;
-}
-
-.left h2,
-.h2 {
-  font-size: 2.5rem;
-  color: #222;
-}
-
-.left .par {
-  letter-spacing: 1.2px;
-  line-height: 30px;
-}
-
-.left-btn {
-  margin: 1.25rem 0;
-}
-
-.left .cta {
-  padding: 0.75rem 1rem;
-  background: #222;
-  border: 1px #222;
-  color: #fff;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: 0.5s ease;
-}
-
-.left .cta:hover {
-  background: #fff;
-  border-color: #fff;
-  color: #ff7200;
-}
-
-.h1,
-.h2 {
-  display: block;
-}
-
-.h1 {
-  font-size: 4rem;
-  color: #ff7200;
-}
-
-/* Right Content */
-
-.right {
-  position: relative;
-  max-width: 30%;
-  width: 100%;
-}
-
-.right .form {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: brown;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 1rem 1.5rem;
-}
-
-.form h2 {
-  text-align: center;
-  color: #222;
-  font-size: 1.2rem;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 1rem auto;
-  padding: 0.8rem;
-}
-
-.form input {
-  width: 100%;
-  height: 1.5rem;
-  margin: 1rem auto;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #ff7200;
-  color: #fff;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  transition: ease-in-out 0.5s;
-}
-
-.form input:focus {
-  outline: none;
-}
-
-.form input::placeholder {
-  color: #ff7200;
-}
-
-.form input:focus {
-  border-color: #fff;
-}
-
-.form input:focus::placeholder {
-  color: #fff;
-}
-
-.form-btn {
-  width: 100%;
-  height: 3rem;
-  border-radius: 2px;
-  background: #ff7200;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #fff;
-  transition: 0.5s ease;
-}
-
-.form-btn:hover {
-  background: #fff;
-  color: #ff7200;
-}
-
-.form .link {
-  font-size: 1rem;
-  margin: 1rem auto;
-  text-align: center;
-  color: #fff;
-}
-
-.form .sign-in > a {
-  color: #ff7200;
-}
-
-.copyright {
-  margin-top: 2rem;
-  text-align: center;
-  opacity: 0.75;
-  font-size: 1rem;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger-menu {
-    display: none;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
-    width: 100%;
-  }
-
-  .logo {
-    color: #222;
-    font-size: 1.75rem;
-    font-weight: 700;
-    padding: 1.5rem 0;
-  }
-
-  /* Content */
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    padding: 3.5rem 0;
-    color: #222;
-  }
-  /* Left Content */
-
-  .left {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 1.2rem;
-  }
-  .h1 {
-    font-size: 3rem;
-    color: #ff7200;
-  }
-  .left .par {
-    letter-spacing: 1.2px;
-    line-height: 20px;
-  }
-  /* Right Content */
-
-  .right {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .hamburger-menu {
-    display: none;
-  }
-
-  /* Content */
-
-  .content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 80rem;
-    height: 85vh;
-    width: 100%;
-    color: #222;
-    gap: 3rem;
-  }
-  
-}
-        button{
-            background: transparent;
-            color: blue;
-            border-radius: 25px;
-            font-weight: bold;
-            font-family: monospace;
-            padding: 12px 32px;
-            margin-left: 150px;
-            text-align: center;
-            cursor: pointer;
-        }
-            
-        </style>
-        <title>Page d'acceuil</title>
-    </head>
-    <body>
-        <div class="main">
-            <div class="navbar">
-                <a class="logo" href="#"> <b>UCCScholarships</b></a>
-                <div class="hamburger-menu">
-                    <ul class="menu">
-                        <li><a href="#" class="a">Accueil</a></li>
-                        <li><a href=""class="a">A propos</a></li>
-                        <li><a href="" class="a">Services</a></li>
-                        <li><a href="" class="a">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="search">
-                </div>
-            </div>
-              <div class="content">
-                <div class="left">
-                  <h2>
-                    <i>Bienvenue dans notre plateforme</i><span class="h1"></span>
-                  </h2>
-                  <p class="par">
-                    
-             Une plateforme de distribution de bourses est un système en ligne conçu pour faciliter l'accès aux financements éducatifs pour les étudiants, chercheurs ou professionnels souhaitant poursuivre des études ou des projets de recherche. Voici une description détaillée de ce type de plateforme :</p>
-
-▎Nom de la plateforme : UCCScholarships
-
-<p>▎Objectif :
-
-UCCScholarships a pour mission de rendre les opportunités de financement accessibles à tous, en simplifiant le processus de recherche et de candidature pour des bourses d'études, des subventions et des financements de projets.</p>
-
-▎Fonctionnalités principales :
-
-1. Recherche de bourses personnalisée :
-
-   • Les utilisateurs peuvent créer un profil en renseignant leurs informations académiques, leurs intérêts de recherche et leurs besoins financiers. La plateforme utilise ces données pour proposer des bourses adaptées.
-
-2. Base de données exhaustive :
-
-   • UCCScholarships regroupe des milliers d'offres de bourses provenant d'institutions éducatives, d'organisations gouvernementales, d'entreprises privées et d'ONG, couvrant divers niveaux d'études (licence, master, doctorat) et domaines d'études.
-
-3. Système de candidature en ligne :
-
-   • Les utilisateurs peuvent postuler directement via la plateforme en soumettant tous les documents nécessaires (CV, lettres de motivation, relevés de notes, etc.) dans un format standardisé.
-
-4. Suivi des candidatures :
-
-   • Un tableau de bord permet aux utilisateurs de suivre l'état de leurs candidatures, d'être alertés des dates limites et de recevoir des notifications concernant les résultats.
-
-5. Ressources et conseils :
-
-   • La plateforme offre des guides pratiques sur la rédaction de lettres de motivation, la préparation aux entretiens et des astuces pour maximiser les chances d'obtenir une bourse.
-
-6. Évaluations et témoignages :
-
-   • Les utilisateurs peuvent lire des avis et des témoignages d'anciens boursiers pour mieux comprendre les exigences et les avantages des différentes bourses.
-
-7. Partenariats avec des institutions :
-
-   • UCCScholarships collabore avec des universités et des organismes pour garantir que les informations sur les bourses sont à jour et fiables.
-
-8. Communauté et réseau :
-
-   • La plateforme inclut un forum où les utilisateurs peuvent échanger des conseils, partager leurs expériences et se soutenir mutuellement dans leur recherche de financements.
-
-<p>▎Avantages :
-
-• Accessibilité : Permet à un plus grand nombre d'étudiants d'accéder à des opportunités de financement.
-
-• Gain de temps : Centralise les informations sur les bourses et simplifie le processus de candidature.
-
-• Support personnalisé : Aide les utilisateurs à trouver les bourses qui correspondent le mieux à leur profil.</p>
-                </div>
-                <div class="right">
-                  <div class="form">
-                    <form action="form.php" method="post"> <h4>MON COMPTE</h4>
-                        <div class="container">
-                            <tr>
-                        <h1><i> JE ME CONNECTE</i></h1>
-                            <div class="name-field">
-                                <label for="nom"> Nom d'utilisateur:</label> 
-                                <input type="text" id="nom" name="nom" minlength="2" maxlength="50" required>
-            
-                            </div>
-                            <div class="name-field">
-                                <label for="mp"> Mot de passe:</label>
-                            <input type="password" id="mp" name="mp" minlength="2" maxlength="20" required>
-                            </div>
-                            <p>.</p>
-                            <p>.</p>
-                               <p><button class="buttons" type="submit"> <b>CONNEXION</b>
-                                </button></p>
-                                <p class="link"> Vous n'avez pas de compte?<span class="sign-in"><a href="foulaire d'incription.html">S'inscrire</a></p></span>
-                            </form>
-                  </div>
-                </div>
-              </div>
+        <ul class="navbar">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Accueil</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">A propos</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </header> -->
+    <!-- !<section class="hero">
+      <div class="desc">
+        <h2>Transformez
+          
+          
+          votre avenir avec nos bourses d'étude d'excellence!</h2>
+        <p>
+          Donnez vie à vos ambitions académiques. l'Université Catholique du
+          Congo soutient les talents prometteurs avec des bourses qui ouvrent
+          les portes d'un avenir brillant
+        </p>
+        <p>Votre avenir commence ici avec nos bourse</p>
+        <button class="cta">Postulez dès maintenant</button>
+      </div>
+      <div class="img">
+        <img src="imgs/9320252_4139054-removebg-preview.png" alt="" />
+      </div>
+    </section> -->
+    <nav>
+      <a href="" class="logo">
+        <img src="imgs/logo.png" alt="" />
+        <span>Ucc Schoolarships</span>
+      </a>
+      <input type="checkbox" id="nav-toggler" class="nav-toggler" />
+      <label for="nav-toggler" class="nav-toggler-label">
+        <i class="fas fa-bars fa-2x burger"></i>
+      </label>
+      <ul class="navbar">
+        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+      <div class="login-btn">
+        <a href="">Se connecter </a>
+      </div>
+    </nav>
+    <header>
+      <div class="hero">
+        <div class="desc">
+          <h2>
+            Transformez votre avenir <br />
+            avec nos <span>bourses d'étude</span> <br />
+            d'excellence !
+          </h2>
+          <p>
+            Donnez vie à vos ambitions académiques. L'Université Catholique du
+            Congo soutient les talents prometteurs avec des bourses qui ouvrent
+            les portes d’un avenir brillant.
+          </p>
+          <p>Votre avenir commence ici avec nos bourses</p>
+          <a href="" class="cta">Postulez dès maintenant</a>
         </div>
-    </body>
+        <div class="img">
+          <img src="imgs/hero-img.png" alt="hero-img" />
+        </div>
+      </div>
+    </header>
+    <section class="why">
+      <h3 class="title">Pourquoi postuler à nos bourses?</h3>
+      <p class="why-desc">
+        Faire le choix de postuler à nos bourses, c’est investir dans votre
+        avenir académique et professionnel. Voici ce que vous gagnez :
+      </p>
+      <div class="opportunities">
+        <div class="card">
+          <h4>Accès à une Éducation de Qualité</h4>
+          <p>
+            Rejoignez un programme d'excellence reconnu pour ses opportunités
+            uniques
+          </p>
+        </div>
+        <div class="card">
+          <h4>Soutien Financier</h4>
+          <p>
+            Réduisez ou éliminez vos frais de scolarité pour vous concentrer
+            pleinement sur vos études.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Développement Personnel et Professionnel</h4>
+          <p>
+            Bénéficiez d’un encadrement académique, de stages, et d’opportunités
+            de mentorat qui enrichiront votre parcours.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Reconnaissance et Distinction</h4>
+          <p>
+            Être lauréat d’une bourse est un gage de mérite et d’ambition qui
+            renforcera votre CV et impressionnera vos futurs employeurs.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h3 class="title">Ils ont réalisé leurs rêves grâce à nos bourses</h3>
+      <p class="testimonials-desc">
+        Découvrez les parcours inspirants de nos étudiants et anciens
+        bénéficiaires qui ont transformé leur vie grâce à nos bourses:
+      </p>
+      <div class="testimonial-contents">
+        <div class="testimonial-content">
+          <p>
+            <i class="fas fa-quote-left"></i>
+            Grâce à cette bourse, j’ai pu intégrer [Nom de l’Université] sans me
+            soucier des frais de scolarité. Aujourd’hui, je prépare mon master
+            et je travaille sur un projet qui a un impact réel dans ma
+            communauté.
+            <i class="fas fa-quote-right"></i>
+          </p>
+          <h3>Marie L</h3>
+          <h4>Étudiante en Sciences Économiques</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>
+            <i class="fas fa-quote-left"></i>
+            Obtenir cette bourse m’a permis de suivre ma passion pour la
+            technologie. J’ai également participé à un programme d’échange qui a
+            élargi mes perspectives professionnelles.
+            <i class="fas fa-quote-right"></i>
+          </p>
+          <h3>Ahmed K</h3>
+          <h4>Diplômé en Informatique</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>
+            <i class="fas fa-quote-left"></i>
+            Avec le soutien financier de [Nom de l’Université], j’ai pu me
+            consacrer à mes études et décrocher un stage dans un hôpital
+            renommé. Mon rêve de devenir médecin devient réalité.
+            <i class="fas fa-quote-right"></i>
+          </p>
+          <h3>Fatou D</h3>
+          <h4>Étudiante en Médecine</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <h3>Contactez-nous</h3>
+      <p class="contact-desc">
+        Vous avez des questions ou besoin d’aide pour votre candidature ? Notre
+        équipe est là pour vous accompagner !
+      </p>
+      <div class="contacts">
+        <div class="credentials">
+          <h4>Nos Coordonnées</h4>
+          <div class="item">
+            <i class="fas fa-envelope"></i
+            ><span>Email : contact@nomuniversite.com</span>
+          </div>
+          <div class="item">
+            <i class="fas fa-phone-alt"></i
+            ><span>Téléphone : +123 456 789</span>
+          </div>
+          <div class="item">
+            <i class="fas fa-map-pin"></i
+            ><span
+              >Adresse : [Nom de l’Université], 123 Avenue de l’Éducation,
+              Ville, Pays</span
+            >
+          </div>
+        </div>
+        <div class="planing">
+          <h4>Horaires d’Ouverture</h4>
+          <div class="item">
+            <i class="fas fa-clock"></i
+            ><span>Lundi - Vendredi : 9h00 - 17h00</span>
+          </div>
+          <div class="item">
+            <i class="fas fa-clock"></i><span>Samedi : 10h00 - 14h00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <a href="#" class="logo"
+        ><img src="imgs/logo.png" alt="" /><span>UCCScholarships</span></a
+      >
+      <div class="footer">
+        <div class="copyright">
+          Copyright Ucc schoolarships ©2024. Tous les droits résérvés.
+        </div>
+        <div class="links">
+          <a href="" class="links"><i class="fab fa-facebook-f"></i></a>
+          <a href="" class="links"><i class="fab fa-twitter"></i></a>
+          <a href="" class="links"><i class="fab fa-whatsapp"></i></a>
+          <a href="" class="links"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
