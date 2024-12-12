@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+            }
+            a {
+                text-decoration: none;
+            }
+        .main{
+            max-width: 100%;
+            padding: 0 1rem;
+            background-image: url("ordi.jpeg");
+            background-position: center;
+            background-size: cover;
+            height: 100vh;}
+            .navbar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 15vh;
+                max-width: 80rem;
+                width: 100%;
+                margin: 0 auto;
+                position: absolute;
+            }
+            .navbar li{
+                height: auto;
+                width: 100px;
+            }
+            .logo{
+                color: #222;
+                font-size: 2rem;
+                font-weight: 700;
+                padding: 1.5rem 0;
+                width: 20%;
+            }
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 35rem;
+                padding: 1.5rem 10;
+            }
+                .menu a {
+                color: #ffffff;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: 0.4s ease-in-out;}
+                .menu a::after{
+                background: #000;
+                display: block;
+                position: relative;
+                top: 1px;
+                width: 0;
+                height: 2px;
+                transition: 0.5s ease-in-out;
+            }
+            .menu a.active::after,
+            .menu a:hover{
+                width: 100%;
+            }
+            .menu a.active,
+            .menu a:hover{
+                color: brown;
+            }
+            img{
+                width: 150px;
+                padding: auto;
+                border-radius: 150px;
+            
+            }
+            </style>
+        <title>Mon compte</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <a class="logo" href="#"><img src="UCC.webp"></a>
+                <div class="menu">
+                    <ul class="menu">
+                        <li><a href="#">Messagerie</a></li>
+                          <li><a href="#"> Mes demandes</a></li>
+                          <li><a href="#">Nouvele demande</a></li>
+                        <li><a href="#">  Mon compte  </a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

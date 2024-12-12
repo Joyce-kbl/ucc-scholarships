@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 1px;
+                padding: 5px;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+            body{
+                background-color: grey;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            }
+            th{
+            text-align: center;
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 250%;
+        }
+        label{
+            margin-bottom: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color:white;
+            padding: 1px;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) ;}
+            button{
+            background: transparent;
+            color: blue;
+            border-radius: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            padding: 12px 32px;
+            margin-left: 600px;
+            text-align: center;
+            cursor: pointer;}
+            input[type="text"], input[type="tel"], input[type="number"],select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        fieldset{
+            background-color:blue;
+            width: 100%;
+            padding: 25px;
+        }
+        </style>
+        <title>Formulaire d'inscription</title>
+    </head>
+    <body>
+    <form action="" method="post">
+        <div class="container">    
+            <fieldset><h1>INFORMATIONS DE CONNEXION</h1></fieldset>
+    <div class="champ">
+        <label for="email"> Mon adresse e-mail</label>
+        <input type="email" id="email" name="email" minlength="2" maxlength="32" required placeholder="joycesala001@gmail.com">
+    </div>
+    <div class="champ">
+        <label for="pa">Mot de passe</label>
+    <input type="password" name="pa", minlength="2" maxlength="23" required></div>
+    <div class="champ">
+        <label for="cp">Confirmer votre Mot de passe</label>
+        <input type="password" name="cp", minlength="2" maxlength="23" required>
+    </div>   
+    <fieldset><h1>INFORMATIONS PERSONNELLES</h1></fieldset>
+    <div class="champ">
+        <label>Nom</label>
+        <input type="text" id="nom" name="nom" minlength="2" maxlength="25" required placeholder="MAWETE">
+    </div>
+    <div class="champ">
+        <label for="pn">Post-nom</label>
+        <input type="text" id="pn" name="pn" minlength="2" maxlength="25" required>
+    </div>
+    <div class="champ">
+        <label for="pr">Prénom</label>
+        <input type="text" id="pr" name="pr" minlength="2" maxlength="25" required>
+    </div>
+    <div class="champ">
+        <label for="se">Sexe</label>
+        <input type="radio" name="se" value="1">M
+        <input type="radio" name="se" value="2">F 
+    </div>
+    <div class="champ">
+            <label for="ec">Etat civil</label>
+            <input type="radio" name="ec" value="1">Celibataire
+            <input type="radio" name="ec" value="2">Marié(e)
+            <input type="radio" name="ec" value="3">Veuf(ve)
+            <input type="radio" name="ec" value="4">en couple
+            <input type="radio" name="ec" value="5">Divorcé(e) 
+    </div>
+    <div class="champ">
+        <label for="lieu">Lieu</label>
+        <input type="text" name="lieu" minlength="2" maxlength="34" required>
+        <label for="dn">Date de naissance</label>
+        <input type="date" name="dn" >
+    </div>
+    <div class="champ">
+            <label for="ad">Adresse</label>
+            <input type="text" name="ad" minlength="2" maxlength="101" required>
+    </div>
+    <div class="champ">
+                <label for="tel">Telephone</label>
+                <input type="tel" name="tel" minlength="2" maxlength="15" >
+    </div>
+    <div class="champ"><h4>Personne à contacter en cas d'urgence</h4>
+       <label for="noms">NOM,POSTNOM,PRENOM</label>
+       <input type="text" name="noms" minlength="2" maxlength="25" required placeholder="MAWETE">
+    </div>
+    <div class="champ">
+        <label for="tp">TELEPHONE</label>
+        <input type="number" name="tp" minlength="2" maxlength="15" required>
+
+    </div>
+
+     <div class="champ">
+    <label for="em">Email</label>
+    <input type="email" name="em">
+     </div>
+    <div class="champ">
+    <label for="as">Adresse</label>
+    <input type="text" name="as" minlength="2" maxlength="101" required>
+    </div>
+    
+    <button class="button" type="submit"> SOUMETTRE</button>    
+
+</form>
+</div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+    <head>
+    <style>
+        *{
+            margin: 15;
+            padding: 10;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-color:burlywood;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color:white;
+            padding: 1px;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) ;
+        }
+        h4{
+            text-align: center;
+            font-size: 20px;
+            background-color: midnightblue;
+        }
+        h1{
+            text-align:left;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: brown;
+        }
+        hr{
+            margin: 10px;
+            background-color: beige;
+            border: 0;
+            height: 1px;
+            width: 100%;
+        }
+        .name-field{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        label{
+            margin-bottom: 6px;
+        }
+        input[type="email"], input[type="passeword"]{
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        p{
+            text-align: center;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        p a {
+            text-decoration: 0;
+            color: red;
+        }
+        button{
+            background: transparent;
+            color: blue;
+            border-radius: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            padding: 12px 32px;
+            margin-left: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+        <title>PROJET FIN D'ANNEE</title>
+
+    </head>
+    <body> 
+        <form action="form.php" method="post"> <h4> UCCScholarships</h4>
+            <div class="container">
+                <tr>
+            <h1><i> JE ME CONNECTE</i></h1>
+                <div class="name-field">
+                    <label for="nom"> Nom d'utilisateur:</label> 
+                    <input type="text" id="nom" name="nom" minlength="2" maxlength="50" required>
+
+                </div>
+                <div class="name-field">
+                    <label for="mp"> Mot de passe:</label>
+                <input type="text" id="mp" name="mp" minlength="2" maxlength="20" required>
+                </div>
+                <form action="radio">
+                    <input type="checkbox" name="moyen" value="1" id="name">
+                    <label for="name"> Je reste connecté</label>
+
+                   <p> </b><button class="buttons" type="submit"> <b>CONNEXION</b>
+                    </button></p>
+                    <p class="link"> Vous n'avez pas de compte?<span class="sign-in"><a href="foulaire d'incription.html">S'inscrire</a></p></span>
+                </form>
+            </fieldset>
+        </form></center>
+    
+        
+
+    </body>
+</html>
