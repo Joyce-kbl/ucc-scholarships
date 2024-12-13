@@ -44,7 +44,7 @@ section {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   height: 10vh;
   width: 100%;
   display: flex;
@@ -346,9 +346,9 @@ header .desc a:hover {
 }
 
 .testimonial-content p {
-  font-size: 1rem;
+  font-size: .85rem;
   color: #264653;
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -507,6 +507,10 @@ footer {
 
 .links i:hover {
   color: #264653;
+}
+
+@media screen and(min-height: 992px) {
+
 }
 
 @media screen and (max-width: 768px) {
