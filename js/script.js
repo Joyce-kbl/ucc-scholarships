@@ -1,6 +1,7 @@
 const navbar = document.getElementById('navbar')
 const nav_links = document.querySelectorAll(".nav-link");
 const burger = document.querySelector(".burger");
+const scrollUpButton = document.getElementById("scrollUp")
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > window.innerHeight * 0.1) {
@@ -8,6 +9,19 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('scrolled')
   }
+
+  if(window.scrollY > window.innerHeight){
+    scrollUpButton.classList.add("show")
+  } else {
+    scrollUpButton.classList.remove("show")
+  }
+})
+
+scrollUpButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
 })
 
 /* Menu */

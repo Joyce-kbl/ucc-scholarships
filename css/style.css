@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: 1px;
+}
+
 * {
   margin: 0;
 }
@@ -39,7 +44,7 @@ section {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   height: 10vh;
   width: 100%;
   display: flex;
@@ -420,12 +425,40 @@ header .desc a:hover {
   font-weight: 500;
 }
 
+#scrollUp {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 20px;
+  background: #264653;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: opacity .4s ease, transform .3s ease;
+  opacity: 0;
+  transform: scale(.8);
+  visibility: hidden;
+}
+
+#scrollUp i {
+  font-size: 1rem;
+}
+
+#scrollUp.show {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 20vh;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 6rem;
   background: #2a9d8f;
 }
 
