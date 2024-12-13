@@ -1,7 +1,17 @@
-/* Menu */
-
+const navbar = document.getElementById('navbar')
 const nav_links = document.querySelectorAll(".nav-link");
 const burger = document.querySelector(".burger");
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight * 0.1) {
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+})
+
+/* Menu */
+
 
 window.onresize = () => {
   const active = document.querySelector(".active");
@@ -30,3 +40,4 @@ burger.addEventListener("click", () => {
     burger.classList.replace("fa-times", "fa-bars");
   }
 });
+
